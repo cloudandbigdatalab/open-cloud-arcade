@@ -1,1 +1,8 @@
 title: Pixel War
+js:
+  - phaser113.min.js
+  - load.js
+  - intro.js
+  - play.js
+  - over.js
+  - game.js

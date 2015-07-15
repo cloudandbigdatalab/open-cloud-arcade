@@ -1,1 +1,8 @@
 title: Princess Quest
+js:
+  - phaser113.min.js
+  - load.js
+  - menu.js
+  - play.js
+  - dead.js
+  - game.js

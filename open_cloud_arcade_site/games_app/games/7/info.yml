@@ -1,1 +1,8 @@
 title: Connected
+js:
+  - phaser113.min.js
+  - load.js
+  - menu.js
+  - play.js
+  - end.js
+  - game.js

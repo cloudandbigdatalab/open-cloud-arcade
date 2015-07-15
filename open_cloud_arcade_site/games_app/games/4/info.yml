@@ -1,1 +1,7 @@
 title: Man vs Penguins
+js:
+  - phaser113.min.js
+  - load.js
+  - menu.js
+  - play.js
+  - game.js

@@ -1,1 +1,6 @@
 title: Save the City
+js:
+  - phaser113.min.js
+  - load.js
+  - play.js
+  - game.js

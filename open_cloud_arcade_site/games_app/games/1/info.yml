@@ -1,1 +1,7 @@
 title: Run!
+js:
+  - phaser113.min.js
+  - load.js
+  - play.js
+  - over.js
+  - game.js

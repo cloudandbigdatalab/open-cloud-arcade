@@ -1,1 +1,7 @@
 title: Box Jump
+js:
+  - phaser113.min.js
+  - load.js
+  - play.js
+  - end.js
+  - game.js
