@@ -1,0 +1,7 @@
+{% if scripts %}
+<head>
+  {% for script in scripts %}
+  <script src='js/{{ script }}'></script>
+  {% endfor %}
+</head>
+{% endif %}

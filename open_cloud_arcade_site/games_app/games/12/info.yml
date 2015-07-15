@@ -1,1 +1,8 @@
 title: Crazy Snake
+js:
+  - phaser202.min.js
+  - load.js
+  - menu.js
+  - play.js
+  - end.js
+  - game.js

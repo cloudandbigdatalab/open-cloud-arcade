@@ -1,1 +1,7 @@
 title: The Three Hearths
+js:
+  - phaser201.min.js
+  - load.js
+  - menu.js
+  - play.js
+  - game.js
