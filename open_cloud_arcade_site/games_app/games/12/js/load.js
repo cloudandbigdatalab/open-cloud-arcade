@@ -20,6 +20,15 @@ Game.Boot.prototype = {
 	},
 	create: function() {
 		this.game.state.start('Load');
+
+		game.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		game.scale.setShowAll();
+
+		game.scale.maxWidth = $(window).width();
+		game.scale.maxHeight = $(window).height() - 30 * 2;
+		game.scale.refresh();
 	}
 };
 

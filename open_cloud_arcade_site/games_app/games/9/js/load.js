@@ -19,6 +19,15 @@ Game.Boot.prototype = {
 	},
 	create: function() {
 		this.game.state.start('Load');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width();
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
 
@@ -50,7 +59,7 @@ Game.Load.prototype = {
 		game.load.audio('yeah', 'sounds/yeah.mp3');
 		game.load.audio('haho', 'sounds/haho.mp3');
 	},
-	
+
 	create: function () {
 		game.state.start('Menu');
 	}

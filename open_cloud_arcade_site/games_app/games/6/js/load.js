@@ -22,14 +22,18 @@ Game.Boot.prototype = {
 		if (!this.game.device.desktop) {
 			document.body.style.backgroundColor="#a3b9ff";
 			game.stage.scale.forceOrientation(false, true, 'orientation');
-            game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
-            this.game.stage.scale.pageAlignHorizontally = true;
-            this.game.stage.scale.pageAlignVeritcally = true;
-            game.stage.scale.setShowAll();
-            game.stage.scale.refresh();
-        }
+		}
 
 		this.game.state.start('Load');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width();
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
 

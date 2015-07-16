@@ -18,6 +18,15 @@ Game.Boot.prototype = {
 	},
 	create: function() {
 		this.game.state.start('Load');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width();
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
 
@@ -53,7 +62,7 @@ Game.Load.prototype = {
 		this.game.load.tilemap('map4', 'levels/4.json', null, Phaser.Tilemap.TILED_JSON);
 		this.game.load.tilemap('map5', 'levels/5.json', null, Phaser.Tilemap.TILED_JSON);
 
-        this.game.load.image('tiles', 'images/tiles.png');	
+        this.game.load.image('tiles', 'images/tiles.png');
 	},
 	create: function () {
 		game.state.start('Menu');

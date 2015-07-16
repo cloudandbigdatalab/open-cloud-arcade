@@ -30,6 +30,15 @@ Game.Boot.prototype = {
 	},
 	create: function() {
 		this.game.state.start('Load');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width();
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
 
@@ -42,7 +51,7 @@ Game.Load.prototype = {
 
 		preloading2 = game.add.sprite(w/2, h/2+15, 'loading2');
 		preloading2.x -= preloading2.width/2;
-		preloading2.alpha = 0.5;		
+		preloading2.alpha = 0.5;
 		preloading = game.add.sprite(w/2, h/2+15, 'loading');
 		preloading.x -= preloading.width/2;
 		game.load.setPreloadSprite(preloading);

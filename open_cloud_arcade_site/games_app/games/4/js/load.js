@@ -12,11 +12,22 @@ Game.Boot.prototype = {
 		game.load.image('loading', 'images/loading.png');
 	},
 	create: function() {
+		/*
 		this.game.stage.scale.minWidth = 600;
 		this.game.stage.scale.minHeight = 420;
 		this.game.stage.scale.setSize();
+		*/
 
 		this.game.state.start('Load');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width();
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
 
@@ -27,7 +38,7 @@ Game.Load.prototype = {
 	    game.stage.backgroundColor = '#1bb7ff';
 	    label2 = game.add.text(Math.floor(w/2)+0.5, Math.floor(h/2)-15+0.5, 'loading...', { font: '30px Arial', fill: '#fff' });
 		label2.anchor.setTo(0.5, 0.5);
-		
+
 		preloading = game.add.sprite(w/2, h/2+15, 'loading');
 		preloading.x -= preloading.width/2;
 		game.load.setPreloadSprite(preloading);
@@ -45,5 +56,14 @@ Game.Load.prototype = {
 	},
 	create: function () {
 		game.state.start('Menu');
+
+		game.stage.scale.pageAlignHorizontally = true;
+		//game.stage.scale.pageAlignVertically = true;
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+		game.stage.scale.setShowAll();
+
+		game.stage.scale.maxWidth = $(window).width() - 30 * 2;
+		game.stage.scale.maxHeight = $(window).height() - 30 * 2;
+		game.stage.scale.refresh();
 	}
 };
