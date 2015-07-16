@@ -22,7 +22,7 @@
 {% if game_list %}
 <ul>
   {% for game in game_list %}
-  <li><a href='/game/{{ game.id }}'>{{ game.title }}</a></li>
+  <li><a href="/games/{{ game.id }}">{{ game.title }}</a></li>
   {% endfor %}
 </ul>
 {% else %}

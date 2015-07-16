@@ -4,7 +4,20 @@
 {% block head %}
 
 {% for script in game_info.scripts %}
-<script src='js/{{ script }}'></script>
+{% load staticfiles %}
+{% if "phaser" in script %}
+
+{% with 'games_app/games/phaser/'|add:script as file %}
+  <script src="{% static file %}"></script>
+{% endwith %}
+
+{% else %}
+
+{% with 'games_app/games/'|add:game_info.id|add:'/js/'|add:script as file %}
+  <script src="{% static file %}"></script>
+{% endwith %}
+
+{% endif %}
 {% endfor %}
 
 {% endblock %}
