@@ -13,7 +13,7 @@ Game.Boot = function (game) { };
 
 Game.Boot.prototype = {
 	preload: function () {
-		game.stage.backgroundColor = '#a3b9ff';   
+		game.stage.backgroundColor = '#a3b9ff';
 		game.load.image('loading', 'images/loading.png');
 		game.load.image('loading2', 'images/loading2.png');
 		game.load.image('orientation', 'images/orientation.png');
@@ -26,8 +26,8 @@ Game.Boot.prototype = {
             this.game.stage.scale.pageAlignHorizontally = true;
             this.game.stage.scale.pageAlignVeritcally = true;
             game.stage.scale.setShowAll();
-            game.stage.scale.refresh();  
-        } 
+            game.stage.scale.refresh();
+        }
 
 		this.game.state.start('Load');
 	}
@@ -54,7 +54,7 @@ Game.Load.prototype = {
 		game.load.image('princess_zoom', 'images/princess_zoom.png');
 		game.load.spritesheet('princess', 'images/princess.png', 52, 72);
 		game.load.image('line', 'images/line.png');
-		
+
 		game.load.spritesheet('mute', 'images/mute.png', 28, 18);
 
 		game.load.audio('dead', 'sounds/dead.wav');

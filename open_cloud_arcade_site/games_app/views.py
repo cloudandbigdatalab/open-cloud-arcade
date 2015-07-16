@@ -28,9 +28,11 @@ def game(request, id):
 
     with open(path, 'r') as f:
         info_file = yaml.load(f)
-        context = {'scripts': info_file['js']}
+        scripts = info_file['js']
+        title = info_file['title']
+        game_info = {'game_info' : {'title' : title, 'scripts' : scripts}}
 
-    return render(request, 'games_app/game.html', context)
+    return render(request, 'games_app/game.html', game_info)
 
 def js(request, id, file):
     path = os.path.dirname(__file__) + '/games/' + id + "/js/" + file
