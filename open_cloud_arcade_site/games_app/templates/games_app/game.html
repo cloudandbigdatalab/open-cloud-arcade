@@ -3,6 +3,9 @@
 {% if game_info %}
 {% block head %}
 
+<script src="//www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="//www.webrtc-experiment.com/screenshot.js"></script>
+
 {% for script in game_info.scripts %}
 {% load staticfiles %}
 {% if "phaser" in script %}
